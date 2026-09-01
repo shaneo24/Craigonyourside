@@ -215,7 +215,7 @@ img{max-width:100%;display:block}
 }
 .rail__num{
   font-family:"Archivo",sans-serif;font-weight:700;font-size:2rem;line-height:1;
-  color:var(--accent);font-variant-numeric:tabular-nums;
+  color:var(--accent);font-variant-numeric:tabular-nums;white-space:nowrap;
 }
 .rail .tag--quiet{color:var(--ink-2)}
 
@@ -262,6 +262,17 @@ img{max-width:100%;display:block}
 .approach .step{grid-template-columns:auto 1fr;gap:.9rem 1.4rem}
 .approach .step__body{grid-column:2}
 .showcase img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+
+/* ---------------- loan programs ---------------- */
+.programs{display:grid;grid-template-columns:repeat(3,1fr);gap:0 clamp(1.5rem,3vw,2.75rem)}
+@media (max-width:860px){.programs{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.programs{grid-template-columns:1fr}}
+.program{border-top:1px solid var(--line);padding:1.3rem 0 1.7rem}
+.program h3{
+  font-family:"Archivo",sans-serif;font-weight:700;
+  font-size:1.3rem;line-height:1.05;letter-spacing:-.01em;margin-bottom:.55rem;
+}
+.program p{color:var(--ink-2);font-size:.96rem;line-height:1.6}
 
 /* ---------------- client tools ---------------- */
 .credit{
@@ -384,6 +395,7 @@ img{max-width:100%;display:block}
       <span class="brand__sub">On Your Side</span>
     </a>
     <nav class="top__nav">
+      <a class="drop-lg" href="#programs">Loan programs</a>
       <a class="drop-lg" href="#approach">How Craig Helps</a>
       <a class="drop-lg" href="#about">About</a>
       <a class="drop-lg" href="#tools">Client tools</a>
@@ -402,20 +414,53 @@ img{max-width:100%;display:block}
     <div class="hero__scrim"></div>
 
     <div class="shell hero__body">
-      <p class="tag">North County Coastal Real Estate</p>
-      <h1 class="display">Let&rsquo;s find you the perfect home.</h1>
-      <p class="lede">More than twenty years helping buyers navigate the North County coastal market, from the first walkthrough to the keys in your hand.</p>
+      <p class="tag">Home Loans &middot; California &amp; Arizona</p>
+      <h1 class="display">Home loans, start to funded.</h1>
+      <p class="lede">Purchase and refinance lending across for California and Arizona &mdash; conventional, FHA, VA, construction and bridge loans.</p>
       <div class="hero__actions">
         <a class="btn btn--lg" href="#contact">Start the conversation</a>
-        <a class="btn btn--lg btn--line" href="#approach">How it works</a>
+        <a class="btn btn--lg btn--line" href="#programs">See loan programs</a>
       </div>
     </div>
 
     <div class="rail">
       <div class="shell rail__in">
         <div class="rail__cell"><span class="rail__num">20+</span><span class="tag tag--quiet">Years licensed</span></div>
-        <div class="rail__cell"><span class="rail__num">240+</span><span class="tag tag--quiet">Families represented</span></div>
-        <div class="rail__cell"><span class="rail__num">2004</span><span class="tag tag--quiet">Solana Beach resident since</span></div>
+        <div class="rail__cell"><span class="rail__num">240+</span><span class="tag tag--quiet">Loans closed</span></div>
+        <div class="rail__cell"><span class="rail__num">CA + AZ</span><span class="tag tag--quiet">Licensed in</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--raised" id="programs">
+    <div class="shell">
+      <div class="band__head">
+        <p class="tag">Loan programs</p>
+        <h2 class="display">Purchase and refinance</h2>
+        <p class="lede">Every program below is written for either a purchase or a refinance, anywhere in California or Arizona.</p>
+      </div>
+
+      <div class="programs">
+        <article class="program">
+          <h3>Conventional</h3>
+          <p>Fixed and adjustable-rate loans for borrowers with established credit and documented income. Conforming and high-balance limits.</p>
+        </article>
+        <article class="program">
+          <h3>FHA</h3>
+          <p>A lower down payment and more forgiving credit requirements, for first-time buyers and anyone rebuilding.</p>
+        </article>
+        <article class="program">
+          <h3>VA</h3>
+          <p>No down payment for eligible veterans, active-duty service members, reservists and surviving spouses.</p>
+        </article>
+        <article class="program">
+          <h3>Construction</h3>
+          <p>Financing to build or substantially renovate, with funds released in draws as the work is completed.</p>
+        </article>
+        <article class="program">
+          <h3>Bridge</h3>
+          <p>Short-term financing so you can close on the next home before the current one has sold.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -424,7 +469,7 @@ img{max-width:100%;display:block}
     <div class="shell">
       <div class="band__head">
         <p class="tag">How Craig Helps</p>
-        <h2 class="display">From first look to closing</h2>
+        <h2 class="display">From pre-approval to funding</h2>
       </div>
 
       <div class="approach">
@@ -432,18 +477,18 @@ img{max-width:100%;display:block}
       <div class="steps">
         <article class="step">
           <p class="step__n">01</p>
-          <h3>The search</h3>
-          <p class="step__body">We talk through what you actually want, then I filter the market down to the handful of homes worth your Saturday &mdash; including the ones not yet listed.</p>
+          <h3>Pre-approval</h3>
+          <p class="step__body">We go through income, assets and credit together, then you get a real number and a pre-approval letter you can put in front of a seller.</p>
         </article>
         <article class="step">
           <p class="step__n">02</p>
-          <h3>Getting ready</h3>
-          <p class="step__body">Lenders want documents and a credit check before they will take you seriously. Both start on this site, and I will tell you exactly what is needed.</p>
+          <h3>Application and documents</h3>
+          <p class="step__body">Send your paperwork through this site and I will tell you exactly what underwriting needs, so nothing has to come back a second time.</p>
         </article>
         <article class="step">
           <p class="step__n">03</p>
-          <h3>Offer and closing</h3>
-          <p class="step__body">Offer strategy in a low-inventory market, inspection guidance, and someone who picks up the phone through escrow.</p>
+          <h3>Underwriting to funding</h3>
+          <p class="step__body">I stay on the file through underwriting, appraisal and docs, and I pick up the phone when you call to ask where it stands.</p>
         </article>
       </div>
       </div>
@@ -460,7 +505,7 @@ img{max-width:100%;display:block}
       <div class="credit" id="credit">
         <div>
           <p class="tag">Credit report</p>
-          <p class="credit__copy">Lenders need a current report before they will issue a pre-approval letter.</p>
+          <p class="credit__copy">A current report is required before I can issue a pre-approval letter.</p>
         </div>
         <p class="credit__price">$145.00 <span class="tag tag--quiet">per applicant</span></p>
         <a class="btn btn--lg" href="#credit">Click here to pay for credit report</a>
@@ -536,7 +581,7 @@ img{max-width:100%;display:block}
         <div>
           <p class="tag">About</p>
           <h2 class="display">Local, not corporate</h2>
-          <p>A Solana Beach resident since 2004, Craig has represented buyers all across North County. Craig delivers straightforward advice, careful preparation, and a practice built almost entirely on referrals.</p>
+          <p>A Solana Beach resident since 2004, Craig has spent more than twenty years writing home loans for clients throughout California and Arizona. Craig delivers straightforward advice, careful preparation, and a practice built almost entirely on referrals.</p>
         </div>
         <div class="portrait"><span class="tag tag--quiet">Portrait</span></div>
       </div>
@@ -544,7 +589,7 @@ img{max-width:100%;display:block}
       <div class="creds">
         <div><p class="tag">NMLS</p><p>#242241</p></div>
         <div><p class="tag">CalBRE</p><p>#00915773</p></div>
-        <div><p class="tag">Brokerage</p><p>Brokerage Name</p></div>
+        <div><p class="tag">Licensed in</p><p>California &middot; Arizona</p></div>
         <div><p class="tag">Office</p><p>3160 Camino Del Rio South Ste 206<br>San Diego, CA 92108</p></div>
       </div>
     </div>
@@ -553,8 +598,8 @@ img{max-width:100%;display:block}
   <section class="band band--raised" id="contact">
     <div class="shell">
       <p class="tag">Get in touch</p>
-      <h2 class="display" style="margin-top:1rem">Let&rsquo;s talk about what you&rsquo;re looking for.</h2>
-      <p class="lede">A short conversation, no obligation. Tell me what you want in a home and I will tell you honestly whether the coast can deliver it.</p>
+      <h2 class="display" style="margin-top:1rem">Let&rsquo;s talk about your loan.</h2>
+      <p class="lede">A short conversation, no obligation. Tell me what you are buying or refinancing and I will tell you honestly what you can qualify for.</p>
       <div class="contact__actions">
         <a class="btn btn--lg" href="tel:+17605192284">Schedule a call</a>
         <a class="btn btn--lg btn--line" href="mailto:craigonyourside@gmail.com">Email Craig</a>
@@ -583,7 +628,7 @@ img{max-width:100%;display:block}
       <a href="#contact">Contact</a>
     </nav>
   </div>
-  <p class="legal">Craig &middot; NMLS #242241 &middot; CalBRE #00915773 &middot; Brokerage Name. Equal Housing Opportunity. Information deemed reliable but not guaranteed. Draft &mdash; placeholder content throughout.</p>
+  <p class="legal">Craig &middot; NMLS #242241 &middot; CalBRE #00915773 &middot; Brokerage Name, NMLS #TK. Licensed to originate residential mortgage loans in California and Arizona. Equal Housing Lender. This is not a commitment to lend. All loans are subject to credit approval, income and asset verification, and property appraisal; programs, rates and terms are subject to change without notice. Verify licensing at nmlsconsumeraccess.org. Draft &mdash; placeholder content throughout.</p>
 </footer>
 
 <script>
