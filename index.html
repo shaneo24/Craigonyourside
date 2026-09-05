@@ -202,7 +202,7 @@ img{max-width:100%;display:block}
     linear-gradient(90deg,rgba(18,48,58,.74) 0%,rgba(18,48,58,.08) 62%);
 }
 .hero__body{position:relative;padding-top:9rem;padding-bottom:2.75rem}
-.hero h1{font-size:var(--s-4);margin-block:1.1rem 1.4rem;max-width:20ch;color:var(--on-deep);text-transform:none;line-height:1.03;letter-spacing:-.02em}
+.hero h1{font-size:var(--s-4);margin-block:0 1.4rem;max-width:20ch;color:var(--on-deep);text-transform:none;line-height:1.03;letter-spacing:-.02em}
 .hero .tag{color:var(--accent-on-deep)}
 .hero .lede{max-width:46ch;color:var(--on-deep-2)}
 .hero__actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2.1rem}
@@ -231,20 +231,10 @@ img{max-width:100%;display:block}
 /* ---------------- approach (a real sequence, so numbered) ---------------- */
 .steps{display:grid;gap:0}
 .step{
-  display:grid;grid-template-columns:auto 1fr 1.35fr;gap:clamp(1.25rem,3vw,3rem);
-  align-items:start;
   padding-block:2.1rem;border-top:1px solid var(--line);
 }
 .step:last-child{border-bottom:1px solid var(--line)}
-@media (max-width:820px){
-  .step{grid-template-columns:auto 1fr;gap:1rem 1.25rem}
-  .step__body{grid-column:2}
-}
-.step__n{
-  font-family:"IBM Plex Mono",monospace;font-size:.86rem;letter-spacing:.16em;
-  color:var(--accent);padding-top:.45rem;font-variant-numeric:tabular-nums;
-}
-.step h3{font-family:"Archivo",sans-serif;letter-spacing:-.01em;font-size:var(--s-2);line-height:1.05}
+.step h3{font-family:"Archivo",sans-serif;letter-spacing:-.01em;font-size:var(--s-2);line-height:1.05;margin-bottom:.6rem}
 .step__body{color:var(--ink-2);max-width:56ch}
 .approach{
   display:grid;grid-template-columns:1fr 1fr;
@@ -257,8 +247,6 @@ img{max-width:100%;display:block}
   box-shadow:var(--shadow-photo);
 }
 /* the ledger sits in a narrower column now, so stack title over body */
-.approach .step{grid-template-columns:auto 1fr;gap:.9rem 1.4rem}
-.approach .step__body{grid-column:2}
 .showcase img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
 
 /* ---------------- loan programs ---------------- */
@@ -414,8 +402,7 @@ img{max-width:100%;display:block}
     <div class="hero__scrim"></div>
 
     <div class="shell hero__body">
-      <p class="tag">Home Loans &middot; California</p>
-      <h1 class="display">Home Loans, from A to Z</h1>
+      <h1 class="display">Home Loans</h1>
       <p class="lede">Purchase and refinance lending for California &mdash; conventional, FHA, VA, construction and bridge loans.</p>
       <div class="hero__actions">
         <a class="btn btn--lg" href="#contact">Start the Conversation</a>
@@ -437,7 +424,7 @@ img{max-width:100%;display:block}
       <div class="band__head">
         <p class="tag">Loan programs</p>
         <h2 class="display">Purchase and Refinance</h2>
-        <p class="lede">Every program below is written for either a purchase or a refinance, anywhere in California.</p>
+        <p class="lede">Each program below is written for either a purchase or a refinance, anywhere in California.</p>
       </div>
 
       <div class="programs">
@@ -475,12 +462,10 @@ img{max-width:100%;display:block}
           </div>
         <div class="steps">
         <article class="step">
-          <p class="step__n">01</p>
           <h3>Pre-Approval</h3>
           <p class="step__body">Send your documentation through this secure site and I will review your income, assets and credit, and then provide you with a pre-approval letter you can present to the seller with your offer.</p>
         </article>
         <article class="step">
-          <p class="step__n">02</p>
           <h3>Underwriting to funding</h3>
           <p class="step__body">With the many details involved in the process, I work closely with escrow, title, the appraiser and underwriter to ensure an efficient and successful outcome.</p>
         </article>
@@ -503,7 +488,7 @@ img{max-width:100%;display:block}
           <p class="tag">Credit report</p>
           <p class="credit__copy">A current report is required before I can issue a pre-approval letter.</p>
         </div>
-        <p class="credit__price">$145.00 <span class="tag tag--quiet">per applicant</span></p>
+        <p class="credit__price">$145.00</p>
         <a class="btn btn--lg" href="#credit">Click here to pay for credit report</a>
       </div>
 
@@ -576,7 +561,6 @@ img{max-width:100%;display:block}
       <div class="about">
         <div>
           <p class="tag">About</p>
-          <h2 class="display">Local, Not Corporate</h2>
           <p>Craig&rsquo;s approach to lending is centered around personalized service, clear communication, and a genuine care for his clients&rsquo; well-being. He takes the time to understand each client&rsquo;s unique needs and goals, providing tailored solutions that make the home financing process smooth and stress-free.</p>
           <p>Craig stands out as a seasoned mortgage professional dedicated to helping individuals and families achieve their homeownership dreams. Craig&rsquo;s deep-rooted expertise is matched by integrity and family values. He believes that every mortgage is more than just a financial transaction, it&rsquo;s a step toward building a brighter future.</p>
         </div>
