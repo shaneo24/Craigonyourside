@@ -202,8 +202,15 @@ img{max-width:100%;display:block}
     linear-gradient(90deg,rgba(18,48,58,.74) 0%,rgba(18,48,58,.08) 62%);
 }
 .hero__body{position:relative;padding-top:9rem;padding-bottom:2.75rem}
-.hero h1{font-size:var(--s-4);margin-block:0 1.4rem;max-width:20ch;color:var(--on-deep);text-transform:none;line-height:1.03;letter-spacing:-.02em}
+.hero h1{font-size:var(--s-4);margin-block:0 .35rem;max-width:20ch;color:var(--on-deep);text-transform:none;line-height:1.03;letter-spacing:-.02em}
 .hero .tag{color:var(--accent-on-deep)}
+.hero__by{
+  font-family:"Petit Formal Script","Snell Roundhand",cursive;
+  color:#FFFFFF;
+  font-size:clamp(1.35rem,1.05rem + 1vw,2rem);
+  line-height:1.25;
+  margin-bottom:1.4rem;
+}
 .hero .lede{max-width:46ch;color:var(--on-deep-2)}
 .hero__actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2.1rem}
 
@@ -329,9 +336,9 @@ img{max-width:100%;display:block}
 /* ---------------- about ---------------- */
 .about{display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
 @media (max-width:860px){.about{grid-template-columns:1fr}}
-.about h2{font-size:var(--s-3);margin-block:.9rem 1.2rem}
-.about p{color:var(--ink-2);font-size:var(--s-1);line-height:1.6;max-width:54ch}
-.about p + p{margin-top:1.1rem}
+.about h2{font-size:var(--s-3);margin-block:0 1.2rem}
+.about p:not(.tag){color:var(--ink-2);font-size:var(--s-1);line-height:1.6;max-width:54ch}
+.about p:not(.tag) + p:not(.tag){margin-top:1.1rem}
 .portrait{
   aspect-ratio:4/5;border:1px solid var(--line);border-radius:4px;
   overflow:hidden;background:var(--surface-2);
@@ -403,6 +410,7 @@ img{max-width:100%;display:block}
 
     <div class="shell hero__body">
       <h1 class="display">Home Loans</h1>
+      <p class="hero__by">By Craig Miller</p>
       <p class="lede">Purchase and refinance lending for California &mdash; conventional, FHA, VA, construction and bridge loans.</p>
       <div class="hero__actions">
         <a class="btn btn--lg" href="#contact">Start the Conversation</a>
@@ -489,7 +497,7 @@ img{max-width:100%;display:block}
           <p class="credit__copy">A current report is required before I can issue a pre-approval letter.</p>
         </div>
         <p class="credit__price">$145.00</p>
-        <a class="btn btn--lg" href="#credit">Click here to pay for credit report</a>
+        <a class="btn btn--lg" href="https://www.venmo.com/craig-miller-106" target="_blank" rel="noopener noreferrer">Click here to pay for credit report</a>
       </div>
 
       <div class="panel">
@@ -560,7 +568,7 @@ img{max-width:100%;display:block}
     <div class="shell">
       <div class="about">
         <div>
-          <p class="tag">About</p>
+          <h2 class="display">About Craig Miller</h2>
           <p>Craig&rsquo;s approach to lending is centered around personalized service, clear communication, and a genuine care for his clients&rsquo; well-being. He takes the time to understand each client&rsquo;s unique needs and goals, providing tailored solutions that make the home financing process smooth and stress-free.</p>
           <p>Craig stands out as a seasoned mortgage professional dedicated to helping individuals and families achieve their homeownership dreams. Craig&rsquo;s deep-rooted expertise is matched by integrity and family values. He believes that every mortgage is more than just a financial transaction, it&rsquo;s a step toward building a brighter future.</p>
         </div>
@@ -571,7 +579,7 @@ img{max-width:100%;display:block}
         <div><p class="tag">NMLS</p><p>#242241</p></div>
         <div><p class="tag">CalBRE</p><p>#00915773</p></div>
         <div><p class="tag">Licensed in</p><p>California</p></div>
-        <div><p class="tag">Office</p><p>3160 Camino Del Rio South Ste 206<br>San Diego, CA 92108</p></div>
+        <div><p class="tag">Office</p><p>Cabrillo Mortgage<br>3160 Camino Del Rio South Ste 206<br>San Diego, CA 92108</p></div>
       </div>
     </div>
   </section>
@@ -589,7 +597,7 @@ img{max-width:100%;display:block}
       <div class="contact__grid">
         <div><p class="tag">Phone</p><p class="contact__val"><a href="tel:+17605192284">(760) 519-2284</a></p></div>
         <div><p class="tag">Email</p><p class="contact__val"><a href="mailto:craigonyourside@gmail.com">craigonyourside@gmail.com</a></p></div>
-        <div><p class="tag">Office</p><p class="contact__val">3160 Camino Del Rio South Ste 206<br>San Diego, CA 92108</p></div>
+        <div><p class="tag">Office</p><p class="contact__val">Cabrillo Mortgage<br>3160 Camino Del Rio South Ste 206<br>San Diego, CA 92108</p></div>
       </div>
     </div>
   </section>
@@ -609,7 +617,7 @@ img{max-width:100%;display:block}
       <a href="#contact">Contact</a>
     </nav>
   </div>
-  <p class="legal">Craig &middot; NMLS #242241 &middot; CalBRE #00915773 &middot; Brokerage Name, NMLS #TK. Licensed to originate residential mortgage loans in California. Equal Housing Lender. This is not a commitment to lend. All loans are subject to credit approval, income and asset verification, and property appraisal; programs, rates and terms are subject to change without notice. Verify licensing at nmlsconsumeraccess.org. Draft &mdash; placeholder content throughout.</p>
+  <p class="legal">Craig Miller &middot; NMLS #242241 &middot; CalBRE #00915773 &middot; Brokerage Name, NMLS #TK. Licensed to originate residential mortgage loans in California. Equal Housing Lender. This is not a commitment to lend. All loans are subject to credit approval, income and asset verification, and property appraisal; programs, rates and terms are subject to change without notice. Verify licensing at nmlsconsumeraccess.org. Draft &mdash; placeholder content throughout.</p>
 </footer>
 
 <script>
