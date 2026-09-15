@@ -293,35 +293,9 @@ img{max-width:100%;display:block}
 }
 .chip svg{width:.95em;height:.95em;fill:currentColor}
 
-.form{display:grid;gap:1.15rem}
-.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem}
-@media (max-width:760px){.row3{grid-template-columns:1fr}}
-.field{display:grid;gap:.4rem}
-.field > span{font-size:.86rem;color:var(--ink-2);font-weight:500}
-.field input,.field select,.field textarea{
-  font-family:inherit;font-size:.96rem;color:var(--ink);
-  background:var(--paper);
-  border:1px solid var(--line-strong);border-radius:3px;
-  padding:.68rem .8rem;width:100%;
-}
-.field textarea{min-height:82px;resize:vertical}
-.field input::placeholder,.field textarea::placeholder{color:var(--ink-3)}
-.field input:focus,.field select:focus,.field textarea:focus{
-  outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);
-}
-.field select option{background:var(--surface);color:var(--ink)}
-
-.drop{
-  border:1px dashed var(--line-strong);border-radius:3px;
-  background:var(--paper);
-  padding:2rem 1.25rem;text-align:center;cursor:pointer;
-  display:grid;gap:.45rem;justify-items:center;
-  transition:border-color .18s ease,background .18s ease;
-}
-.drop:hover{border-color:var(--accent);background:var(--accent-soft)}
-.drop svg{width:1.7rem;height:1.7rem;fill:var(--accent)}
-.drop strong{font-weight:600}
-.drop span{color:var(--ink-3);font-size:.86rem}
+.upload{display:grid;gap:.6rem}
+.upload__hint{font-size:.85rem;color:var(--ink-3);text-align:center}
+.upload .fine{margin-top:.5rem}
 
 .fine{display:flex;gap:.6rem;align-items:flex-start;color:var(--ink-3);font-size:.85rem;line-height:1.6}
 .fine svg{width:1rem;height:1rem;flex:none;margin-top:.3rem;fill:var(--accent)}
@@ -537,7 +511,7 @@ img{max-width:100%;display:block}
         <div class="panel__head">
           <div>
             <h3>Secure document upload</h3>
-            <p>Fill in your details, attach your files, and they go straight to Craig&rsquo;s Dropbox.</p>
+            <p>Upload through Dropbox&rsquo;s secure page &mdash; no account needed, just your name and email. Your files go straight to Craig.</p>
           </div>
           <span class="chip">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 1.8 0 5.7l6 3.9 6-3.9-6-3.9Zm12 0-6 3.9 6 3.9 6-3.9-6-3.9ZM0 13.5l6 3.9 6-3.9-6-3.9-6 3.9Zm18-3.9-6 3.9 6 3.9 6-3.9-6-3.9ZM6 18.7l6 3.9 6-3.9-6-3.9-6 3.9Z"/></svg>
@@ -545,43 +519,17 @@ img{max-width:100%;display:block}
           </span>
         </div>
 
-        <form class="form" onsubmit="return false">
-          <div class="row3">
-            <label class="field"><span>Full name</span><input type="text" placeholder="Jane Doe" autocomplete="name"></label>
-            <label class="field"><span>Email</span><input type="email" placeholder="jane@example.com" autocomplete="email"></label>
-            <label class="field"><span>Phone</span><input type="tel" placeholder="(760) 555-0100" autocomplete="tel"></label>
-          </div>
-
-          <label class="drop">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 6.5 8.5 8 10l3-3v10h2V7l3 3 1.5-1.5L12 3Zm-8 15v3h16v-3h-2v1H6v-1H4Z"/></svg>
-            <strong>Choose files or drag them here</strong>
-            <span>PDF, JPG, PNG or DOCX &middot; up to 25 MB each</span>
-          </label>
-
-          <div class="row3">
-            <label class="field"><span>Document type</span>
-              <select>
-                <option>Tax returns</option>
-                <option>W-2 or 1099</option>
-                <option>Pay stubs</option>
-                <option>Bank statements</option>
-                <option>Photo ID</option>
-                <option>Something else</option>
-              </select>
-            </label>
-            <label class="field" style="grid-column:span 2"><span>Anything I should know? (optional)</span><input type="text" placeholder="A note about what you are sending"></label>
-          </div>
-
-          <button class="btn btn--lg btn--wide" type="button">
+        <div class="upload">
+          <a class="btn btn--lg btn--wide" href="https://www.dropbox.com/request/u0fjjbuntb95pzh0ao3a" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 1.8 0 5.7l6 3.9 6-3.9-6-3.9Zm12 0-6 3.9 6 3.9 6-3.9-6-3.9ZM0 13.5l6 3.9 6-3.9-6-3.9-6 3.9Zm18-3.9-6 3.9 6 3.9 6-3.9-6-3.9ZM6 18.7l6 3.9 6-3.9-6-3.9-6 3.9Z"/></svg>
-            Upload securely to Dropbox
-          </button>
-
+            Upload Documents Securely
+          </a>
+          <p class="upload__hint">Opens Dropbox in a new tab</p>
           <p class="fine">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1 4 4.5v6c0 5 3.4 9.7 8 10.9 4.6-1.2 8-5.9 8-10.9v-6L12 1Zm0 2.2 6 2.6v4.7c0 4-2.6 7.8-6 8.9-3.4-1.1-6-4.9-6-8.9V5.8l6-2.6Z"/></svg>
             Files are encrypted in transit and at rest. Uploads are private &mdash; you cannot see other people&rsquo;s files, and they cannot see yours. Please do not email tax documents.
           </p>
-        </form>
+        </div>
 
         <div class="needs">
           <p class="tag">What to send</p>
@@ -623,7 +571,7 @@ img{max-width:100%;display:block}
       <h2 class="display" style="margin-top:1rem">Let&rsquo;s Talk About Your Loan.</h2>
       <p class="lede">A short conversation, no obligation. Tell me what you are buying or refinancing and I will tell you honestly what you can qualify for.</p>
       <div class="contact__actions">
-        <a class="btn btn--lg" href="tel:+17605192284">Schedule a call</a>
+        <a class="btn btn--lg" href="tel:+17605192284">Call Craig</a>
         <a class="btn btn--lg btn--line" href="mailto:craigonyourside@gmail.com">Email Craig</a>
       </div>
 
